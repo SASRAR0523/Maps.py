@@ -1,0 +1,137 @@
+# Write a program that takes a single line of input, which is a string, and prints the occurrence of all characters in the given string.
+
+s = input()
+
+count = {}
+
+for ch in s:
+    ch = ch.lower()
+
+    if ch == " ":
+        continue
+
+    if ch in count:
+        count[ch] += 1
+    else:
+        count[ch] = 1
+
+for ch in count:
+    print(ch + ":" + str(count[ch]))
+
+# Design a program that reads an array of N integer values and prints the occurrence of all elements in the array.
+
+n = int(input())
+a = list(map(int, input().split()))
+
+count = {}
+
+for num in a:
+    if num in count:
+        count[num] += 1
+    else:
+        count[num] = 1
+
+for num in count:
+    print(str(num) + ":" + str(count[num]))
+
+# Write a program that reads an array of N integer values and identifies the element that has occurred the most number of times.
+
+n = int(input())
+a = list(map(int, input().split()))
+
+count = {}
+
+for num in a:
+    if num in count:
+        count[num] += 1
+    else:
+        count[num] = 1
+
+max_count = 0
+answer = None
+
+for num in a:
+    if count[num] > max_count:
+        max_count = count[num]
+        answer = num
+
+print(answer)
+
+# Develop a program that takes an array of N integer values as input and identifies the element that has occurred the most number of times.
+
+n = int(input())
+a = list(map(int, input().split()))
+
+count = {}
+
+for num in a:
+    if num in count:
+        count[num] += 1
+    else:
+        count[num] = 1
+
+max_count = 0
+answer = None
+
+for num in a:
+    if count[num] >= max_count:
+        max_count = count[num]
+        answer = num
+
+print(answer)
+
+# Design a program that reads an array of N integer values and identifies the element that has occurred the most number of times.
+
+n = int(input())
+a = list(map(int, input().split()))
+
+count = {}
+
+for num in a:
+    if num in count:
+        count[num] += 1
+    else:
+        count[num] = 1
+
+max_count = max(count.values())
+
+answer = min(num for num in count if count[num] == max_count)
+
+print(answer)
+
+# Write a program that reads an array of N integer values and determines the element that has occurred the most number of times.
+
+n = int(input())
+a = list(map(int, input().split()))
+
+count = {}
+
+for num in a:
+    if num in count:
+        count[num] += 1
+    else:
+        count[num] = 1
+
+max_count = 0
+answer = 0
+
+for num in count:
+    if count[num] > max_count:
+        max_count = count[num]
+        answer = num
+    elif count[num] == max_count and num > answer:
+        answer = num
+
+print(answer)
+
+
+
+
+
+
+
+
+
+
+
+
